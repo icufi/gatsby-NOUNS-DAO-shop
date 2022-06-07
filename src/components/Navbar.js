@@ -1,8 +1,7 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
 import { FiAlignJustify } from "react-icons/fi"
-
-import glasses from "../assets/images/nouns_glasses.png"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Navbar = () => {
     const [show, setShow] = useState(false)
@@ -11,7 +10,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={glasses} alt="Nouns Glasses" />
+            <StaticImage src="../assets/images/nouns_glasses.png" alt="Nouns Glasses" placeholder="none"/>
           </Link>
           <button className="nav-btn" onClick={() => setShow(!show)}>
             <FiAlignJustify />
